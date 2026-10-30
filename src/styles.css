@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #6366f1;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #3b82f6;
+  --color-secondary-foreground: #ffffff;
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+  --color-muted: #9ca3af;
+  --color-muted-foreground: #6b7280;
+  --color-accent: #f3f4f6;
+  --color-accent-foreground: #1f2937;
+  --color-border: #374151;
+  --color-input: #374151;
+  --color-ring: #6366f1;
+  --color-background: #111827;
+  --color-foreground: #f9fafb;
+  --color-card: #1f2937;
+  --color-card-foreground: #f9fafb;
+  --color-popover: #1f2937;
+  --color-popover-foreground: #f9fafb;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background;
+  }
+}
