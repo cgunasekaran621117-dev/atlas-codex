@@ -78,6 +78,21 @@ declare module "@tanstack/react-router" {
       pendingComponent?: never;
       component: () => Promise<typeof import("./pages/PacketViewPage")>;
     };
+    "/profile": {
+      id: "/profile";
+      path: "/profile";
+      fullPath: "/profile";
+      parentPath: never;
+      loader?: never;
+      validateSearch?: never;
+      beforeLoad?: () => Promise<void>;
+      afterLoad?: never;
+      onLoaded?: never;
+      hasErrorBoundary?: never;
+      errorBoundary?: never;
+      pendingComponent?: never;
+      component: () => Promise<typeof import("./pages/ProfilePage")>;
+    };
   }
 }
 
@@ -103,6 +118,10 @@ const routeTree = {
       {
         path: "packet",
         id: "/packet",
+      },
+      {
+        path: "profile",
+        id: "/profile",
       },
     ],
   },

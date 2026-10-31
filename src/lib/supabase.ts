@@ -23,6 +23,26 @@ export const getStatus = (days: number): "expired" | "soon" | "ok" => {
 // Status colors for badges
 export const statusColors: Record<"expired" | "soon" | "ok", string> = {
   expired: "bg-red-500",
-  soon: "bg-yellow-500",
-  ok: "bg-green-500",
+  soon: "bg-amber-500",
+  ok: "bg-emerald-500",
+};
+
+// Format date for display
+export const formatDate = (dateStr: string): string => {
+  const date = new Date(dateStr);
+  return date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
+};
+
+// Get user initials from email
+export const getInitials = (email: string): string => {
+  const name = email.split("@")[0];
+  return name
+    .split(".")
+    .map((part) => part.charAt(0).toUpperCase())
+    .join("")
+    .slice(0, 2);
 };

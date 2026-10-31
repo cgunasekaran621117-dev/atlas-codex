@@ -3,17 +3,20 @@ import react from "@vitejs/plugin-react";
 import { tanstackRouter } from "@tanstack/router-plugin/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import tailwindcss from "@tailwindcss/vite";
+import path from "path";
 
 export default defineConfig({
   plugins: [
     react(),
-    tanstackRouter(),
+    tanstackRouter({
+      routeFileIgnorePattern: "**/__root.tsx",
+    }),
     tsconfigPaths(),
     tailwindcss(),
   ],
   resolve: {
     alias: {
-      "@": "/src",
+      "@": path.resolve(__dirname, "./src"),
     },
   },
 });
