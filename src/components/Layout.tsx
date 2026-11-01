@@ -4,9 +4,9 @@ import { Home, Calendar, Settings, User, LogOut, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { supabase } from "@/lib/supabase";
 import { useUser } from "@/hooks/useUser";
-import { ThemeToggle } from "./components/ThemeToggle";
-import { UserAvatar } from "./components/UserAvatar";
-import { Sheet, SheetContent, SheetTrigger } from "./components/ui/sheet";
+import { ThemeToggle } from "./ThemeToggle";
+import { UserAvatar } from "./UserAvatar";
+import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 
 export function Layout() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

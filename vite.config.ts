@@ -8,9 +8,7 @@ import path from "path";
 export default defineConfig({
   plugins: [
     react(),
-    tanstackRouter({
-      routeFileIgnorePattern: "**/__root.tsx",
-    }),
+    tanstackRouter(),
     tsconfigPaths(),
     tailwindcss(),
   ],

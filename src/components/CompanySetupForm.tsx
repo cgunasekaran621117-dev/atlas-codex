@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import { Label } from "./ui/label";
+import { Label } from "./Label";
 import { supabase } from "@/lib/supabase";
 import { useNavigate } from "@tanstack/react-router";
 
