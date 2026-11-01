@@ -3,7 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Deadline } from "@/lib/types";
-import { getDaysUntilExpiry, getStatus } from "@/lib/supabase";
+import { getStatus } from "@/lib/supabase";
+import { getDaysUntilExpiry } from "@/lib/utils";
 import { statusColors } from "@/lib/supabase";
 
 interface CalendarViewProps {

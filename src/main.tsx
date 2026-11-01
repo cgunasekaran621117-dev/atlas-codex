@@ -1,6 +1,6 @@
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
-import routeTree from "./routeTree.gen";
+import { routeTree } from "./routeTree.gen";
 import { Toaster } from "sonner";
 import "./styles.css";
 

@@ -1,4 +1,4 @@
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./Select";
 import { FILTER_OPTIONS, SORT_OPTIONS } from "@/lib/constants";
 
 interface FilterBarProps {

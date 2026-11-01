@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import { Label } from "./ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
+import { Label } from "./Label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./Select";
 import { supabase } from "@/lib/supabase";
 
 interface AddDeadlineFormProps {

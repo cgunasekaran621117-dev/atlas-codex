@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useSearchParams } from "@tanstack/react-router";
+import { useSearch } from "@tanstack/react-router";
 import { supabase } from "@/lib/supabase";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -7,7 +7,7 @@ import { StatusBadge } from "@/components/StatusBadge";
 import { Deadline } from "@/lib/types";
 
 export function PacketViewPage() {
-  const [searchParams] = useSearchParams();
+  const searchParams = useSearch({ strict: false }) as { packet?: string };
   const [packet, setPacket] = useState<{ company: string; items: Deadline[] } | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
